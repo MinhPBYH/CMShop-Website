@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<th scope="col" th:fragment="column_link(fieldName, columnLabel,removeTag)" th:remove="${removeTag}">
+	<a class="text-decoration-none text-white" 
+		th:title="${sortField == fieldName ? 
+		(sortOrder == 'asc' ?  'Sort users descending by ' + fieldName : 'Sort users ascending by ' + fieldName):'Sort users ascending by ' + fieldName}" 
+		th:href="@{${'/users/page/' + currentPage + '?sortField='+ fieldName +'&sortOrder=' + (sortField ==fieldName ?
+		(sortOrder == 'asc' ?'desc':'asc'):'asc')}+ ${keyword != null ?'&keyword=' + keyword:''}}">
+	[[${columnLabel}]]
+	<i th:if="${sortField ==fieldName}" th:class="${sortOrder == 'asc' ? 'fa-solid fa-caret-up':'fa-solid fa-caret-down'}"></i>
+	</a>
+</th>
+
+<a th:fragment="page_link(pageNum, buttonColumn)" class="page-link" th:href="@{'/users/page/' + ${pageNum}  +'?sortField=' + ${sortField} + '&sortOrder=' + ${sortOrder} +${keyword != null ? '&keyword=' + keyword:''}}" >
+	[[${buttonColumn}]]
+</a>
+</body>
+</html>
