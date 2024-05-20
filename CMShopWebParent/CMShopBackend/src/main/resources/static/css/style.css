@@ -3,7 +3,7 @@
 	div.full-details{
 		display: none;
 	}
-	
+
 	div.less-details{
 		display: block;
 	}
@@ -14,11 +14,11 @@
 	div.full-details{
 		display: block;
 	}
-	
+
 	div.less-details{
 		display: none;
 	}
-	
+
 	.hideable-column{
 		display: none;
 	}
@@ -32,6 +32,36 @@
 	.hideable-column{
 		display: table-cell;
 	}
+}
+
+
+
+.btn-grad {
+	background-image: linear-gradient(to right, #7b4397 0%, #dc2430  51%, #7b4397  100%);
+
+	padding: 15px 45px;
+	text-align: center;
+	text-transform: uppercase;
+	transition: 0.5s;
+	background-size: 200% auto;
+	color: white;
+	box-shadow: 0 0 20px #eee;
+	border-radius: 10px;
+	display: block;
+}
+
+.background-login{
+	background-image: linear-gradient(to right, #c2e59c 0%, #64b3f4  51%, #c2e59c  100%);
+}
+
+.btn-grad:hover {
+	background-position: right center; /* change the direction of the change here */
+	color: #fff;
+	text-decoration: none;
+}
+
+.input-height{
+	height: 50px
 }
 
 

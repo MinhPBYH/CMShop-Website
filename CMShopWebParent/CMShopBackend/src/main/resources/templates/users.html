@@ -1,66 +1,10 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="viewport" content="width=device-width initial-scale=1.0 minimum-scale=1.0">
-		<title>Home - CMShop Admin</title>
-		<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
-		<link rel="stylesheet" th:href="@{/icon/fontawesome/css/all.css}">
-		<link rel="icon" th:href="@{/images/CMShop.png}">
-		<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
-		<script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
-		<script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
-</head>
-	</head>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+	<head th:replace="fragments::page_head('CMShop Admin - Users')"/>
 	<body>
 		<div class="container-fluid">
-			<div>
-				<nav class="navbar navbar-expand-xl bg-dark navbar-dark py-0">
-					<a class="navbar-brand ms-3 " th:href="@{/}">
-						<img class="p-1" alt="" th:src="@{/images/CMShopSmall.png}">
-					</a>
-					<button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-				    	<span class="navbar-toggler-icon"></span>
-				    </button>
-					<div class="collapse navbar-collapse" id="navbarNav">
-						<ul class="navbar-nav">
-							<li class="nav-item ms-xl-0 ms-4 mx-xl-3">
-								<a class="nav-link fs-6" th:href="@{/users}">Users</a>
-							</li>
-							<li class="nav-item ms-xl-0 ms-4 mx-xl-3">
-								<a class="nav-link fs-6" th:href="@{/categories}">Categories</a>
-							</li>
-							<li class="nav-item ms-xl-0 ms-4 mx-xl-3">
-								<a class="nav-link fs-6" th:href="@{/brands}">Brands</a>
-							</li>
-							<li class="nav-item ms-xl-0 ms-4 mx-xl-3">
-								<a class="nav-link fs-6" th:href="@{/products}">Products</a>
-							</li>
-							<li class="nav-item ms-xl-0 ms-4 mx-xl-3">
-								<a class="nav-link fs-6" th:href="@{/customers}">Customers</a>
-							</li>
-							<li class="nav-item ms-xl-0 ms-4 mx-xl-3">
-								<a class="nav-link fs-6" th:href="@{/shipping}">Shipping</a>
-							</li>
-							<li class="nav-item ms-xl-0 ms-4 mx-xl-3">
-								<a class="nav-link fs-6" th:href="@{/report}">Sales Report</a>
-							</li>
-							<li class="nav-item ms-xl-0 ms-4 mx-xl-3">
-								<a class="nav-link fs-6" th:href="@{/orders}">Orders</a>
-							</li>
-							<li class="nav-item ms-xl-0 ms-4 mx-xl-3">
-								<a class="nav-link fs-6" th:href="@{/articles}">Articles</a>
-							</li>
-							<li class="nav-item ms-xl-0 ms-4 mx-xl-3">
-								<a class="nav-link fs-6" th:href="@{/menus}">Menus</a>
-							</li>
-							<li class="nav-item ms-xl-0 ms-4 mx-xl-3">
-								<a class="nav-link fs-6" th:href="@{/settings}">Settings</a>
-							</li>
-						</ul>
-					</div>
-				</nav>
-			</div>
+			<div th:replace="navigation::menu()"/>
 			<div>
 				<h2>Manager Users</h2>
 			</div>
@@ -227,25 +171,21 @@
 				  	</ul>
 				</nav>
 			</div>
-			<div class="text-center">
-				<p>CMShop - Copyright &copy; CMShop</p>
-			</div>
+			<div th:replace="fragments::copyright()"/>
 		</div>
 	</body>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			
-			$('.link-delete').on("click",function(e){
+			$('.link-delete').click(function(e){
 				e.preventDefault();
 				showModalConfirmation('Delete Confirmation', 
 						'Are you sure you want to delete this user ' 
 						+ $(this).attr('userFirstName') 
 						+ '(Id :' + $(this).attr('userId') +')?',);
 				$('#buttonYes').attr('href', $(this).attr('href'));
-			});
-			$('#buttonClearSearch').click(function(){
 				
-			})
+			});
 			
 		});
 		

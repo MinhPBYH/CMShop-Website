@@ -1,71 +1,16 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="viewport" content="width=device-width initial-scale=1.0 minimum-scale=1.0">
-		<title>CMShop Admin Control Panel</title>
-		<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
-		<link rel="stylesheet" th:href="@{/icon/fontawesome/css/all.css}">
-		<link rel="icon" th:href="@{/images/CMShop.png}">
-		<script type="text/javascript" th:src="@{/webjars/jquery/jquery.min.js}"></script>
-		<script type="text/javascript" th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
-</head>
-	</head>
+<html xmlns:th="http://www.thymeleaf.org"
+		xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+	<head th:replace="fragments::page_head('CMShop Admin - Home')"/>
 	<body>
 		<div class="container-fluid">
+			<div th:replace="navigation::menu()"/>
 			<div>
-				<nav class="navbar navbar-expand-lg bg-dark navbar-dark py-0">
-					<a class="navbar-brand ms-3 " th:href="@{/}">
-						<img class="p-1" alt="" th:src="@{/images/CMShopSmall.png}">
-					</a>
-					<button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-				    	<span class="navbar-toggler-icon"></span>
-				    </button>
-					<div class="collapse navbar-collapse" id="navbarNav">
-						<ul class="navbar-nav">
-							<li class="nav-item ms-lg-0 ms-3">
-								<a class="nav-link fs-6" th:href="@{/users}">Users</a>
-							</li>
-							<li class="nav-item ms-lg-0 ms-3">
-								<a class="nav-link fs-6" th:href="@{/categories}">Categories</a>
-							</li>
-							<li class="nav-item ms-lg-0 ms-3">
-								<a class="nav-link fs-6" th:href="@{/brands}">Brands</a>
-							</li>
-							<li class="nav-item ms-lg-0 ms-3">
-								<a class="nav-link fs-6" th:href="@{/products}">Products</a>
-							</li>
-							<li class="nav-item ms-lg-0 ms-3">
-								<a class="nav-link fs-6" th:href="@{/customers}">Customers</a>
-							</li>
-							<li class="nav-item ms-lg-0 ms-3">
-								<a class="nav-link fs-6" th:href="@{/shipping}">Shipping</a>
-							</li>
-							<li class="nav-item ms-lg-0 ms-3">
-								<a class="nav-link fs-6" th:href="@{/report}">Sales Report</a>
-							</li>
-							<li class="nav-item ms-lg-0 ms-3">
-								<a class="nav-link fs-6" th:href="@{/orders}">Orders</a>
-							</li>
-							<li class="nav-item ms-lg-0 ms-3">
-								<a class="nav-link fs-6" th:href="@{/articles}">Articles</a>
-							</li>
-							<li class="nav-item ms-lg-0 ms-3">
-								<a class="nav-link fs-6" th:href="@{/menus}">Menus</a>
-							</li>
-							<li class="nav-item ms-lg-0 ms-3">
-								<a class="nav-link fs-6" th:href="@{/settings}">Settings</a>
-							</li>
-						</ul>
-					</div>
-				</nav>
+				<h1>Welcome to ADmin</h1>
 			</div>
-			<div>
-				<h1>Welcome to ADminf</h1>
-			</div>
-			<div class="text-center">
-				<p>CM Shop - Copyright &copy; CM Shop</p>
-			</div>
+			<div th:replace="fragments::copyright()"/>
+
 		</div>
+
 	</body>
 </html>
