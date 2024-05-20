@@ -71,4 +71,16 @@ public class CMShopUserDetails implements UserDetails {
 	public String getFullname() {
 		return this.user.getFirstName() + " " + this.user.getLastName();
 	}
+	
+	public String getEmail() {
+		return this.user.getEmail();
+	}
+	
+	public void setFirstName(String firstName) {
+		this.user.setFirstName(firstName);
+	}
+	
+	public void setLastName(String lastName) {
+		this.user.setLastName(lastName);
+	}
 }

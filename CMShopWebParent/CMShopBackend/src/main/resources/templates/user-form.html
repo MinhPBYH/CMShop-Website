@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments::page_head(${pageTitle})"/>
-<body>
+<body class="bg-admin-page">
 	<div class="container-fluid">
 		<div th:replace="navigation::menu()"/>
 		<div>
@@ -10,11 +10,11 @@
 		<form th:action="@{/users/save}" method="post" class="col-lg-8 offset-lg-2 col-xl-6 offset-xl-3"
 			th:object="${user}" onsubmit="return checkUniqueEmail(this);" enctype="multipart/form-data">
 			<input type="hidden" id="id" th:field="*{id}">
-			<div class="border border-secondary-subtle rounded p-3">
+			<div class="border border-secondary-subtle rounded p-3 bg-white">
 				<div class="row  my-3">
 					<label class="col-sm-2 offset-sm-1 col-form-label " for="emailInput">E-mail</label>
 					<div class="col-sm-9">
-						<input type="email" tabindex="-1" class="form-control" id="emailInput" th:field="*{email}" required maxlength="128" minlength="8">
+						<input type="email" tabindex="-1" class="form-control  bg-secondary-subtle text-secondary" id="emailInput" th:field="*{email}" required maxlength="128" minlength="8">
 					</div>
 				</div>
 				

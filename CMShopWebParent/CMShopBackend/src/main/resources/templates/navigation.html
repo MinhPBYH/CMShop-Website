@@ -58,11 +58,13 @@
 							<li class="nav-item ms-lg-1 ms-4 mx-xl-2">
 								<i class="fa-solid fa-user-tie fs-2 text-secondary"></i>
 							</li>
-							<li class="nav-item ms-lg-1 ms-4 mx-xl-2 dropdown">
+							<li class="nav-item ms-lg-1 ms-4 mx-xl-2 dropdown " >
 								<a class="nav-link fs-6 dropdown-toggle" data-bs-toggle="dropdown"
-									sec:authentication="principal.fullname" href=""></a>
-								<div class="dropdown-menu">
-									<a class="dropdown-item" id="logoutLink" href="">Logout</a>
+									sec:authentication="principal.fullname" ></a>
+								<div class="dropdown-menu mt-3 dropdown-menu-end">				
+									<a class="dropdown-item  text-center" id="" th:href="@{/account}">Account</a>
+									<hr class="dropdown-divider ">
+									<a class="dropdown-item text-center" id="logoutLink" href="">Logout</a>
 								</div>
 							</li>
 							

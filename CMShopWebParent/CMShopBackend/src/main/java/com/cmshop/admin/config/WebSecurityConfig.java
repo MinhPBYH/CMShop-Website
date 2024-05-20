@@ -51,8 +51,7 @@ public class WebSecurityConfig {
 						.permitAll())
 				.logout(logout -> logout.permitAll())
 				.rememberMe(rem -> rem.key("eMrebmemeRpohSMC_00028032")
-						.tokenValiditySeconds(7*24*60*60))
-		;
+						.tokenValiditySeconds(7*24*60*60));
 
 		return http.build();
 	}

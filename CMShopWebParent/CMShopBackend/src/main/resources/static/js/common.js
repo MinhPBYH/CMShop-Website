@@ -3,4 +3,6 @@ $(document).ready(function(){
 		e.preventDefault();
 		document.logoutForm.submit();
 	});
+	
 });
+
