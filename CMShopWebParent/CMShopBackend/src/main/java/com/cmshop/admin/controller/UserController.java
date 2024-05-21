@@ -62,7 +62,7 @@ public class UserController {
 		model.addAttribute("keyword", keyword);
 		System.out.println("key:" + keyword);
 		model.addAttribute("lastPage",page.getTotalPages());
-		return "users";
+		return "users/users";
 	}
 	
 	@GetMapping("/users/new")
@@ -73,7 +73,7 @@ public class UserController {
 		model.addAttribute("pageTitle", "Create New User");
 		model.addAttribute("user",user);
 		model.addAttribute("listRoles", listRoles);
-		return "user-form";
+		return "users/user-form";
 	}
 	
 	@GetMapping("/users/edit/{userId}")
@@ -86,7 +86,7 @@ public class UserController {
 			System.out.println("minh" +  user.getPassword());
 			model.addAttribute("user", user);
 			model.addAttribute("pageTitle", "Update User (Id: " + userId + ")");
-			return "user-form";
+			return "users/user-form";
 		} catch (UserNotFoundException e) {
 			redirectAttributes.addAttribute("message", e.getMessage());
 			return "redirect:/users";

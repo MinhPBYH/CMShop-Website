@@ -43,6 +43,12 @@ public class WebSecurityConfig {
 		http.authenticationProvider(authenticationProvider());
 
 		http.authorizeHttpRequests(auth -> auth
+						.requestMatchers("/users/**","/settings/**").hasAuthority("Admin")
+						.requestMatchers("/categories/**","/brands/**","/articles/**","/menu/**","/products/**").hasAnyAuthority("Admin","Editor")
+						.requestMatchers("/questions/**","/reviews/**").hasAnyAuthority("Admin","Assistant")
+						.requestMatchers("/products/**","/orders/**").hasAnyAuthority("Salesperson","Shipper","Admin")
+						.requestMatchers("/customers/**","/shipping/**","/reports/**").hasAnyAuthority("Salesperson","Admin")
+						
 						.anyRequest().authenticated()
 				)
 				.formLogin(form -> form

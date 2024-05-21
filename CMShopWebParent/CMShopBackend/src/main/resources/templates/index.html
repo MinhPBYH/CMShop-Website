@@ -5,9 +5,13 @@
 	<body  class="bg-admin-page">
 		<div class="container-fluid">
 			<div th:replace="navigation::menu()"/>
-			<div>
-				<h1>Welcome to ADmin</h1>
+			<div class="mt-2 mb-3">
+				<h1>CMShop Home Page</h1>
+				<span class="fs-4">Welcome</span>
+				<a class="fs-4 text-decoration-none" th:href="@{/account}" sec:authentication="principal.fullname"> </a>
+				<span class="fs-4 fw-medium" sec:authentication="principal.roles"></span>
 			</div>
+			
 			<div th:replace="fragments::copyright()"/>
 
 		</div>

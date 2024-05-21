@@ -83,4 +83,8 @@ public class CMShopUserDetails implements UserDetails {
 	public void setLastName(String lastName) {
 		this.user.setLastName(lastName);
 	}
+	
+	public String getRoles() {
+		return this.user.getRoles().toString();
+	}
 }
