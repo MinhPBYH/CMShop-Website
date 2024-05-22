@@ -12,17 +12,17 @@ Develop based on database diagram:
 <h4>Main functions:</h4>
 <span>- Login: (log in using email and password. If you select 'remember me,' you won't need to log in again when you revisit the website)</span>
 <img src="https://github.com/MinhPBYH/CMShop-Website/blob/main/img_readme/login-page.png" width="700" />
-<span>- After login, we go to the home of admin page. Each user will has different authorities based on their role:</span>
-<span>   + With Admin user:</span> 
+<span>- After login, we go to the home of admin page. Each user will has different authorities based on their role:</span><br>
+<span>   + With Admin user:</span> <br>
 <img src="https://github.com/MinhPBYH/CMShop-Website/blob/main/img_readme/homepage-admin.png" width="700" />
-<span>   + With salesperson user:</span> 
+<span>   + With salesperson user:</span> <br>
 <img src="https://github.com/MinhPBYH/CMShop-Website/blob/main/img_readme/homepage-salesperson.png" width="700" />
-<span>   + With editor user:</span> 
+<span>   + With editor user:</span> <br>
 <img src="https://github.com/MinhPBYH/CMShop-Website/blob/main/img_readme/homepage-editor.png" width="700" />
-<span>   + With shiper user:</span> 
+<span>   + With shiper user:</span> <br>
 <img src="https://github.com/MinhPBYH/CMShop-Website/blob/main/img_readme/homepage-shipper.png" width="700" />
-<span>   + With assistant user:</span> 
+<span>   + With assistant user:</span> <br>
 <img src="https://github.com/MinhPBYH/CMShop-Website/blob/main/img_readme/homepage-assistant.png" width="700" />
-<span>- Create new user | Download CSV list users file | Download Excel list users file| Download PDF list users file</span> 
+<span>- Create new user | Download CSV list users file | Download Excel list users file| Download PDF list users file</span> <br>
 <img src="https://github.com/MinhPBYH/CMShop-Website/blob/main/img_readme/functional-buttons.png" width="200" />
  
