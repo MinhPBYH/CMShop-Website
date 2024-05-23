@@ -36,7 +36,7 @@
 
 
 
-.btn-grad {
+.btn-login {
 	background-image: linear-gradient(to right, #7b4397 0%, #dc2430  51%, #7b4397  100%);
 
 	padding: 15px 45px;
@@ -54,16 +54,55 @@
 	background-image: linear-gradient(to right, #c2e59c 0%, #64b3f4  51%, #c2e59c  100%);
 }
 
-.btn-grad:hover {
+.input-height{
+	height: 50px
+}
+
+         
+.btn-save {
+	background-image: linear-gradient(to right, #56ab2f 0%, #a8e063  51%, #56ab2f  100%);
+	margin: 10px;
+	padding: 15px 45px;
+	text-align: center;
+	transition: 0.5s;
+	background-size: 200% auto;
+	color: white;            
+	box-shadow: 0 0 20px #eee;
+	border-radius: 10px;
+	display: block;
+ }
+
+.btn-save:hover, .btn-cancel:hover, .btn-login:hover, .btn-grad:hover {
 	background-position: right center; /* change the direction of the change here */
 	color: #fff;
 	text-decoration: none;
 }
 
-.input-height{
-	height: 50px
+         
+.btn-cancel {
+	background-image: linear-gradient(to right, #606c88 0%, #3f4c6b  51%, #606c88  100%);
+    padding: 15px 45px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;     
+    border-radius: 10px;
+    display: block;
 }
 
+         
+.btn-search {
+   background-image: linear-gradient(to right, #56CCF2 0%, #2F80ED  51%, #56CCF2  100%);
+   padding: 15px 45px;
+   text-align: center;
+   transition: 0.5s;
+   background-size: 200% auto;         
+   border-radius: 10px;
+   display: block;
+}
 
+         
+                           
+ 
+     
 
 
