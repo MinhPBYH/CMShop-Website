@@ -76,33 +76,17 @@
 					</div>
 				</div>
 				<div class="text-center">
-					<input type="submit" value="Save" class="btn btn-primary me-3">
-					<input type="button" value="Cancel" class="btn btn-secondary" id="buttonCancel">
+					<input type="submit" value="Save" class="btn btn-save text-white px-3 me-2">
+					<input type="button" value="Cancel" class="btn btn-cancel text-white" id="buttonCancel" >
 				</div>
 			</div>
 		</form>
-		
-		<div class="modal fade mt-5" id="dupilicatedEmailDialog">
-			<div class="modal-dialog">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h4 class="modal-title text-danger" id="modalTitle"></h4>
-						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-					</div>
-					<div class="modal-body">
-						<p id="modalMessage"></p>
-					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>
 		
 		<div th:replace="fragments::copyright()"/>
 	</div>
 </body>
 <script type="text/javascript">
+	moduleURL = "[[@{/}]]";
 	//note in html
 	//enctype="multipart/form-data" ensures that the file is sent to the server
 	
@@ -115,6 +99,7 @@
 			confirmPassword.setCustomValidity("");
 		}
 	}
+	
 	
 	
 	
