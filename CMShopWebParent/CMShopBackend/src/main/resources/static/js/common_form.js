@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$("#buttonCancel").on("click",function(){
-		window.location.href = "[[@{/users}]]";
+		window.location.href = moduleURL;
 	});
 	if($('#id').val() != ""){
 		$('#emailInput').prop('readonly', true);
@@ -28,6 +28,8 @@ $(document).ready(function(){
 			showImageThumnail(this);
 		}
 	});
+	
+	
 });
 //show thumnail when user choose a image file from web
 function showImageThumnail(fileImageInput){
